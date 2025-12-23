@@ -1,0 +1,161 @@
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=0.45in, top=0.35in, bottom=0.35in]{geometry}
+
+% --- FONT SETTINGS (ATS-Safe: Using Helvetica clone for pdfLaTeX) ---
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- PAGE SETUP ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% --- SECTION FORMATTING ---
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% --- CUSTOM COMMANDS ---
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{minipage}[t]{0.70\textwidth}
+      \textbf{#1}\\
+      \textit{\small#3}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.28\textwidth}
+      \raggedleft
+      #2\\
+      \textit{\small #4}
+    \end{minipage}
+    \vspace{-3pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{2pt}\item
+    \textbf{#1} \\
+    \textit{\small#2}
+    \vspace{-2pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% Balanced list spacing
+\setlist[itemize]{itemsep=1pt, topsep=1pt, parsep=0pt, partopsep=0pt}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    \textbf{\Huge \scshape R Aswin} \\ \vspace{2pt}
+    \small 
+    \href{mailto:arasuaswinr@gmail.com}{arasuaswinr@gmail.com} $|$ 
+    \href{tel:+919342377523}{+91 9342377523} $|$ 
+    \href{https://www.linkedin.com/in/iamaswinr}{linkedin.com/in/iamaswinr} $|$
+    \href{https://aswinarasu.com}{aswinarasu.com}
+\end{center}
+
+% --- PROFESSIONAL SUMMARY ---
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small\item{Cloud-focused professional with a solid grasp of AWS core services and cloud architecture best practices. Demonstrated ability to design secure, scalable, and cost-efficient solutions aligned with the AWS Well-Architected Framework. Strong understanding of high-availability architectures, serverless computing, and DevOps fundamentals. Analytical problem-solver with a disciplined learning mindset, prepared to contribute to and optimize real-world cloud environments.}
+\end{itemize}
+
+% --- EDUCATION ---
+\section{Education}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {SRM Institute of Science and Technology}{Chennai, India}
+      {Bachelor of Technology in Computer Science and Engineering}{2023 -- 2027}
+      \begin{itemize}[leftmargin=1em, itemsep=0pt]
+        \resumeItem{\textbf{CGPA:} 7.6}
+      \end{itemize}
+  \end{itemize}
+
+% --- CERTIFICATIONS ---
+\section{Certifications}
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
+    \small
+    \item \textbf{AWS Certified Solutions Architect -- Associate} \hfill \textit{Active}
+    \item \textbf{Cisco Certified Network Associate (CCNA)}
+    \item \textbf{Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)}
+  \end{itemize}
+
+% --- TECHNICAL SKILLS ---
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Core Competencies:} Cloud Architecture, High Availability, Fault Tolerance, Disaster Recovery, Monitoring, CI/CD \\[2pt]
+      \textbf{Cloud Compute:} EC2, Lambda, ECS, Fargate, Beanstalk, VPC, Route 53, CloudFront, API Gateway \\[2pt]
+      \textbf{Storage \& Database:} S3, EBS, EFS, FSx, RDS (Multi-AZ), Aurora, DynamoDB, ElastiCache, Redshift \\[2pt]
+      \textbf{Security:} IAM, KMS, Cognito, WAF, Shield, Secrets Manager, GuardDuty, Security Groups \\[2pt]
+      \textbf{Management \& Monitoring:} SQS, SNS, EventBridge, CloudWatch, CloudTrail, Config, Systems Manager \\[2pt]
+      \textbf{OS \& Scripting:} Linux (RHEL/Ubuntu), Bash, Python, Windows Server \\[2pt]
+      \textbf{Networking:} TCP/IP, DNS, HTTP/S, SSH, Subnetting, CIDR, OSI Model
+    }}
+\end{itemize}
+
+% --- PROJECTS ---
+\section{Key Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    
+    \resumeProjectHeading
+      {\textbf{Serverless Order Processing Microservice}}
+      {\emph{AWS Lambda, API Gateway, SQS, DynamoDB}}
+      \begin{itemize}[leftmargin=1em, itemsep=1pt]
+        \resumeItem{Architected a decoupled, event-driven backend for handling e-commerce order ingestion, replacing traditional server-based polling with instant event triggers.}
+        \resumeItem{Integrated Amazon SQS as a message buffer between the API and compute layer, preventing data loss during simulated traffic spikes and ensuring 100\% message durability.}
+        \resumeItem{Utilized AWS Lambda for compute and DynamoDB for storage, resulting in a zero-cost infrastructure footprint during idle periods compared to always-on EC2 instances.}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {\textbf{Fault-Tolerant 3-Tier Web Infrastructure}}
+      {\emph{VPC, EC2, Application Load Balancer, Auto Scaling, RDS}}
+      \begin{itemize}[leftmargin=1em, itemsep=1pt]
+        \resumeItem{Designed a secure VPC network across two Availability Zones with public/private subnet isolation to protect backend resources from direct internet access.}
+        \resumeItem{Deployed an Application Load Balancer backed by an Auto Scaling Group with dynamic tracking policies to automatically add/remove instances based on CPU utilization.}
+        \resumeItem{Provisioned an RDS MySQL instance in Multi-AZ mode to ensure automatic failover and data persistence in the event of a zonal outage.}
+      \end{itemize}
+
+    \resumeProjectHeading
+      {\textbf{CI/CD Automated Cloud Portfolio}}
+      {\emph{S3, CloudFront, GitHub Actions, AWS WAF}}
+      \begin{itemize}[leftmargin=1em, itemsep=1pt]
+        \resumeItem{Hosted a static web application on Amazon S3 integrated with CloudFront (CDN) to reduce global latency and offload traffic from origin servers.}
+        \resumeItem{Built a CI/CD pipeline using GitHub Actions that automatically builds and syncs code changes to the S3 bucket whenever commits are pushed to the main branch.}
+        \resumeItem{Hardened the application security by implementing Origin Access Control (OAC) to restrict direct S3 access and configured AWS WAF rules to block common bot attacks.}
+      \end{itemize}
+
+\end{itemize}
+
+% --- LEARNING ---
+\section{Continuous Learning}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeItem{\textbf{DevOps Tools:} Terraform, Docker, Kubernetes, GitHub Actions, Git}
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Aswin | AWS Certified Solutions Architect | Cloud Engineer</title>
+    <meta name="description"
+        content="R Aswin - AWS Certified Solutions Architect specializing in secure, cost-optimized cloud infrastructures. View my portfolio and get in touch.">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (Compiled) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-slate-950 text-slate-300 antialiased selection:bg-accent selection:text-white overflow-x-hidden">
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="fixed w-full z-50 glass-nav" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group"
+                    onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+                    <span
+                        class="text-white font-bold text-xl tracking-tight group-hover:text-accent transition-colors duration-300">R
+                        Aswin</span>
+                    <span
+                        class="h-2 w-2 rounded-full bg-accent group-hover:scale-125 transition-transform duration-300"></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about"
+                        class="nav-link text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium">About</a>
+                    <a href="#skills"
+                        class="nav-link text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium">Skills</a>
+                    <a href="#projects"
+                        class="nav-link text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium">Projects</a>
+                    <a href="#learning"
+                        class="nav-link text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium">Learning</a>
+                    <a href="#contact"
+                        class="nav-link text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium">Contact</a>
+
+                    <!-- Download Resume Button - Primary CTA -->
+                    <a href="R_Aswin_Resume.pdf" download="R_Aswin_Resume.pdf"
+                        class="download-btn flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-dark text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-glow"
+                        title="Download Resume">
+                        <i class="fas fa-file-download text-sm"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button type="button" onclick="toggleMenu()"
+                    class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all duration-300"
+                    aria-label="Toggle menu">
+                    <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-slate-900/98 backdrop-blur-lg border-b border-slate-800" id="mobile-menu">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#about" onclick="toggleMenu()"
+                    class="block px-4 py-3 rounded-lg text-base font-medium hover:text-white hover:bg-slate-800 transition-all duration-300">About</a>
+                <a href="#skills" onclick="toggleMenu()"
+                    class="block px-4 py-3 rounded-lg text-base font-medium hover:text-white hover:bg-slate-800 transition-all duration-300">Skills</a>
+                <a href="#projects" onclick="toggleMenu()"
+                    class="block px-4 py-3 rounded-lg text-base font-medium hover:text-white hover:bg-slate-800 transition-all duration-300">Projects</a>
+                <a href="#learning" onclick="toggleMenu()"
+                    class="block px-4 py-3 rounded-lg text-base font-medium hover:text-white hover:bg-slate-800 transition-all duration-300">Learning</a>
+                <a href="#contact" onclick="toggleMenu()"
+                    class="block px-4 py-3 rounded-lg text-base font-medium hover:text-white hover:bg-slate-800 transition-all duration-300">Contact</a>
+                <a href="R_Aswin_Resume.pdf" download="R_Aswin_Resume.pdf"
+                    class="flex items-center justify-center gap-2 mx-4 mt-4 px-4 py-3 bg-accent text-white font-semibold rounded-lg">
+                    <i class="fas fa-file-download"></i>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION (F-Pattern Optimized) ==================== -->
+    <header class="relative min-h-screen flex items-center pt-20 hero-gradient overflow-hidden">
+        <!-- Subtle background grid -->
+        <div
+            class="absolute inset-0 bg-[linear-gradient(to_right,#80808006_1px,transparent_1px),linear-gradient(to_bottom,#80808006_1px,transparent_1px)] bg-[size:48px_48px]">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-16 lg:py-20">
+            <div class="grid lg:grid-cols-3 gap-12 items-center">
+
+                <!-- Left Content (2/3 width) -->
+                <div class="lg:col-span-2 text-center lg:text-left">
+
+                    <!-- Name -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-3 animate-fade-in-up"
+                        style="animation-delay: 0.1s; animation-fill-mode: both;">
+                        R Aswin
+                    </h1>
+
+                    <!-- Role -->
+                    <p class="text-lg sm:text-xl text-slate-300 font-medium mb-6 animate-fade-in-up"
+                        style="animation-delay: 0.2s; animation-fill-mode: both;">
+                        <span class="gradient-text-accent">AWS Certified</span> Cloud Engineer
+                    </p>
+
+                    <!-- Value Proposition -->
+                    <p class="text-base sm:text-lg text-slate-400 mb-4 leading-relaxed animate-fade-in-up"
+                        style="animation-delay: 0.3s; animation-fill-mode: both;">
+                        I design, deploy, and troubleshoot <span class="text-white font-medium">Well-Architected AWS
+                            solutions</span>—from serverless applications to high-availability systems—engineered
+                        for security, scalability, performance, and cost efficiency.
+                    </p>
+
+                    <!-- Hands-on Experience -->
+                    <p class="text-sm sm:text-base text-slate-500 mb-8 leading-relaxed animate-fade-in-up"
+                        style="animation-delay: 0.35s; animation-fill-mode: both;">
+                        Hands-on experience with <span class="text-slate-400">EC2, VPC, IAM, Load Balancers, Auto
+                            Scaling, CloudWatch</span>, and application performance troubleshooting.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 animate-fade-in-up"
+                        style="animation-delay: 0.4s; animation-fill-mode: both;">
+                        <a href="#projects"
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white font-bold rounded-lg shadow-lg hover:shadow-glow transition-all duration-300 transform hover:-translate-y-1">
+                            <i class="fas fa-layer-group"></i>
+                            <span>View My Work</span>
+                        </a>
+                        <a href="#contact"
+                            class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-slate-600 hover:border-accent text-slate-300 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:bg-accent/10">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Badge (1/3 width) -->
+                <div class="flex justify-center lg:justify-end animate-fade-in-up"
+                    style="animation-delay: 0.5s; animation-fill-mode: both;">
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-accent/10 rounded-2xl blur-xl group-hover:bg-accent/20 transition-all duration-500">
+                        </div>
+                        <div
+                            class="relative bg-slate-900/80 p-5 rounded-2xl border border-slate-700/50 backdrop-blur-sm group-hover:border-accent/30 transition-all duration-500">
+                            <img src="image.png" alt="AWS Certified Solutions Architect Associate"
+                                class="h-40 w-40 object-contain mx-auto">
+                            <p class="text-xs text-slate-500 text-center mt-3">Certified 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="flex flex-wrap justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-slate-800/50 animate-fade-in-up"
+                style="animation-delay: 0.6s; animation-fill-mode: both;">
+                <div class="text-center">
+                    <p class="text-xl font-bold text-white">3+</p>
+                    <p class="text-xs text-slate-500">Cloud Projects</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-xl font-bold text-white">AWS</p>
+                    <p class="text-xs text-slate-500">SAA Certified</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-xl font-bold text-white">CSE</p>
+                    <p class="text-xs text-slate-500">B.Tech @ SRMIST</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+            <a href="#about" class="text-slate-500 hover:text-accent transition-colors duration-300"
+                aria-label="Scroll to About section">
+                <i class="fas fa-chevron-down text-xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-20 bg-slate-950 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">About Me</h2>
+                <div class="flex items-center justify-center gap-3">
+                    <div class="h-px w-12 bg-slate-700"></div>
+                    <div class="h-1 w-20 bg-gradient-to-r from-accent to-accent-light rounded-full"></div>
+                    <div class="h-px w-12 bg-slate-700"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Left: About Text -->
+                <div class="animate-on-scroll delay-1 bg-slate-900/50 rounded-2xl p-8 border border-slate-800/50">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-user text-accent"></i> Who I Am
+                    </h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        I'm <span class="text-white font-semibold">R Aswin</span>, a 3rd-year Computer Science student
+                        at SRM Institute of Science and Technology with a deep passion for cloud technologies and
+                        infrastructure design.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        With hands-on experience in <span class="text-accent font-medium">Cloud Computing, Serverless
+                            Architectures, and DevOps</span>, I specialize in bridging the gap between development and
+                        operations through automation and secure infrastructure design.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        My goal is to contribute to teams by designing scalable, resilient, cost-efficient, and secure
+                        cloud systems, while continuously learning from real-world engineering challenges.
+                    </p>
+                </div>
+
+                <!-- Right: Quick Facts -->
+                <div class="space-y-6">
+                    <!-- Education -->
+                    <div class="animate-on-scroll delay-2 bg-slate-900/50 rounded-2xl p-6 border border-slate-800/50">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fas fa-graduation-cap text-primary-400"></i> Education
+                        </h3>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-white font-medium">B.Tech in Computer Science Engineering</p>
+                                <p class="text-slate-400 text-sm">SRM Institute of Science and Technology • 2023 - 2027
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">AWS Certified Solutions Architect</p>
+                                <p class="text-slate-400 text-sm">Associate Level • 2026</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What I'm Looking For -->
+                    <div class="animate-on-scroll delay-3 bg-slate-900/50 rounded-2xl p-6 border border-slate-800/50">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-3">
+                            <i class="fas fa-briefcase text-green-400"></i> What I'm Looking For
+                        </h3>
+                        <ul class="space-y-2 text-slate-400">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent text-sm"></i>
+                                Associate Solutions Architect (Intern/Junior)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent text-sm"></i>
+                                Cloud Support Associate
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent text-sm"></i>
+                                Cloud Operations (CloudOps)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent text-sm"></i>
+                                Cloud Engineer
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills" class="py-32 bg-slate-900/30 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Technical Expertise</h2>
+                <div class="flex items-center justify-center gap-3">
+                    <div class="h-px w-12 bg-slate-700"></div>
+                    <div class="h-1 w-20 bg-gradient-to-r from-accent to-accent-light rounded-full"></div>
+                    <div class="h-px w-12 bg-slate-700"></div>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Cloud Core -->
+                <div
+                    class="animate-on-scroll delay-1 skill-card bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-accent/30">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fab fa-aws text-3xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-5">Cloud Core</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
+                            EC2 & Auto Scaling
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
+                            S3 Storage Solutions
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
+                            Lambda (Serverless)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-accent rounded-full"></span>
+                            RDS & DynamoDB
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Networking -->
+                <div
+                    class="animate-on-scroll delay-2 skill-card bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-primary-500/30">
+                    <div class="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-network-wired text-3xl text-primary-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-5">Networking</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-primary-400 rounded-full"></span>
+                            VPC Design
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-primary-400 rounded-full"></span>
+                            Route53 (DNS)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-primary-400 rounded-full"></span>
+                            CloudFront (CDN)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-primary-400 rounded-full"></span>
+                            Load Balancers
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-primary-400 rounded-full"></span>
+                            API Gateway
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Security -->
+                <div
+                    class="animate-on-scroll delay-3 skill-card bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-red-500/30">
+                    <div class="w-14 h-14 bg-red-500/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-3xl text-red-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-5">Security</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
+                            IAM Policies & Roles
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
+                            WAF & Shield
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
+                            KMS (Encryption)
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-red-400 rounded-full"></span>
+                            Security Groups
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div
+                    class="animate-on-scroll delay-3 skill-card bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-green-500/30">
+                    <div class="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code-branch text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-5">DevOps & Tools</h3>
+                    <ul class="space-y-3 text-slate-400">
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                            Git Version Control
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                            Linux & Bash
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                            Python
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                            CloudWatch & CloudTrail
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION (Problem → Solution → Result) ==================== -->
+    <section id="projects" class="py-32 min-h-screen flex items-center bg-slate-950 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Flagship Projects</h2>
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="h-px w-12 bg-slate-700"></div>
+                    <div class="h-1 w-20 bg-gradient-to-r from-accent to-accent-light rounded-full"></div>
+                    <div class="h-px w-12 bg-slate-700"></div>
+                </div>
+                <p class="text-slate-400 text-lg">Real-world cloud architectures demonstrating problem-solving ability.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: Serverless Event Processing -->
+                <div
+                    class="animate-on-scroll delay-1 project-card bg-slate-900/80 rounded-2xl overflow-hidden border border-slate-800 flex flex-col h-full">
+                    <!-- Flagship Badge -->
+                    <div class="bg-gradient-to-r from-accent to-accent-light h-1"></div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <span
+                                    class="flagship-badge inline-block px-3 py-1 rounded-full text-white font-bold uppercase mb-3">Flagship</span>
+                                <h3 class="text-xl font-bold text-white">Serverless Event Processing</h3>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-bolt text-accent text-xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Problem → Solution → Result -->
+                        <div class="space-y-5 flex-1">
+                            <div>
+                                <p class="text-xs font-bold text-red-400 uppercase tracking-wider mb-1">Problem</p>
+                                <p class="text-slate-400 text-sm">Manual event handling caused processing delays and
+                                    required constant server monitoring.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-accent uppercase tracking-wider mb-1">Solution</p>
+                                <p class="text-slate-400 text-sm">Built a decoupled pipeline using SNS → SQS → Lambda →
+                                    DynamoDB with auto-scaling.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-green-400 uppercase tracking-wider mb-1">Result</p>
+                                <p class="text-slate-400 text-sm">10x faster processing with zero server management
+                                    overhead.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tech Tags -->
+                        <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-slate-800">
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">Lambda</span>
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">SNS/SQS</span>
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">DynamoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: High-Availability Web App -->
+                <div
+                    class="animate-on-scroll delay-2 project-card bg-slate-900/80 rounded-2xl overflow-hidden border border-slate-800 flex flex-col h-full">
+                    <div class="bg-gradient-to-r from-primary-500 to-primary-400 h-1"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <span
+                                    class="flagship-badge inline-block px-3 py-1 rounded-full text-white font-bold uppercase mb-3">Flagship</span>
+                                <h3 class="text-xl font-bold text-white">High-Availability Web App</h3>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-primary-500/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-server text-primary-400 text-xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Problem → Solution → Result -->
+                        <div class="space-y-5 flex-1">
+                            <div>
+                                <p class="text-xs font-bold text-red-400 uppercase tracking-wider mb-1">Problem</p>
+                                <p class="text-slate-400 text-sm">Single points of failure caused unexpected downtime
+                                    during traffic spikes.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-primary-400 uppercase tracking-wider mb-1">Solution</p>
+                                <p class="text-slate-400 text-sm">Deployed Multi-AZ architecture with Application Load
+                                    Balancer and Auto Scaling Groups.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-green-400 uppercase tracking-wider mb-1">Result</p>
+                                <p class="text-slate-400 text-sm">Achieved 99.9% uptime with automatic recovery from
+                                    failures.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tech Tags -->
+                        <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-slate-800">
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">EC2</span>
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">Auto Scaling</span>
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">ALB</span>
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">RDS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Secure Static Site -->
+                <div
+                    class="animate-on-scroll delay-3 project-card bg-slate-900/80 rounded-2xl overflow-hidden border border-slate-800 flex flex-col h-full">
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-400 h-1"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex items-start justify-between mb-6">
+                            <div>
+                                <span
+                                    class="flagship-badge inline-block px-3 py-1 rounded-full text-white font-bold uppercase mb-3">Flagship</span>
+                                <h3 class="text-xl font-bold text-white">Secure Static Site</h3>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-lock text-purple-400 text-xl"></i>
+                            </div>
+                        </div>
+
+                        <!-- Problem → Solution → Result -->
+                        <div class="space-y-5 flex-1">
+                            <div>
+                                <p class="text-xs font-bold text-red-400 uppercase tracking-wider mb-1">Problem</p>
+                                <p class="text-slate-400 text-sm">Website was vulnerable to common web attacks like SQL
+                                    injection and XSS.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-purple-400 uppercase tracking-wider mb-1">Solution</p>
+                                <p class="text-slate-400 text-sm">Implemented S3 with OAC, CloudFront CDN, and WAF rules
+                                    for protection.</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-green-400 uppercase tracking-wider mb-1">Result</p>
+                                <p class="text-slate-400 text-sm">Effectively mitigated common web attack vectors using
+                                    WAF rules.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tech Tags -->
+                        <div class="flex flex-wrap gap-2 mt-auto pt-6 border-t border-slate-800">
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">S3</span>
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">CloudFront</span>
+                            <span class="px-3 py-1.5 bg-slate-800 text-xs text-slate-300 rounded-lg">WAF</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LEARNING & GROWTH SECTION ==================== -->
+    <section id="learning" class="py-48 min-h-screen flex items-center bg-slate-900/30 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Learning & Growth</h2>
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="h-px w-12 bg-slate-700"></div>
+                    <div class="h-1 w-20 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full"></div>
+                    <div class="h-px w-12 bg-slate-700"></div>
+                </div>
+                <p class="text-slate-400 text-lg">Technologies I'm actively studying and building projects with</p>
+            </div>
+
+            <!-- Learning Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Terraform -->
+                <div
+                    class="animate-on-scroll delay-1 bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 text-center group">
+                    <div
+                        class="w-16 h-16 bg-yellow-500/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-cubes text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Terraform</h3>
+                    <p class="text-slate-400">Infrastructure as Code</p>
+                </div>
+
+                <!-- Docker -->
+                <div
+                    class="animate-on-scroll delay-2 bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 text-center group">
+                    <div
+                        class="w-16 h-16 bg-yellow-500/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-docker text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Docker</h3>
+                    <p class="text-slate-400">Containerization</p>
+                </div>
+
+                <!-- GitHub Actions -->
+                <div
+                    class="animate-on-scroll delay-3 bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 text-center group">
+                    <div
+                        class="w-16 h-16 bg-yellow-500/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-github text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">GitHub Actions</h3>
+                    <p class="text-slate-400">CI/CD Pipelines</p>
+                </div>
+
+                <!-- Kubernetes -->
+                <div
+                    class="animate-on-scroll delay-3 bg-slate-900/80 p-8 rounded-xl border border-slate-800 hover:border-yellow-500/30 transition-all duration-300 text-center group">
+                    <div
+                        class="w-16 h-16 bg-yellow-500/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-dharmachakra text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Kubernetes</h3>
+                    <p class="text-slate-400">Container Orchestration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION (Conversion Optimized) ==================== -->
+    <footer id="contact" class="bg-slate-900 border-t border-slate-800 pt-20 pb-10 relative overflow-hidden">
+        <!-- Background gradient -->
+        <div
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-48 bg-gradient-to-t from-accent/5 to-transparent">
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <!-- Section Header -->
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's Work Together</h2>
+                <div class="flex items-center justify-center gap-3">
+                    <div class="h-px w-12 bg-slate-700"></div>
+                    <div class="h-1 w-20 bg-gradient-to-r from-accent to-accent-light rounded-full"></div>
+                    <div class="h-px w-12 bg-slate-700"></div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Left: Contact Info -->
+                <div class="animate-on-scroll">
+                    <p class="text-slate-400 text-lg mb-6">
+                        I'm open to cloud engineering roles, internships, and infrastructure projects. Whether you
+                        need help designing a scalable infrastructure or optimizing your cloud costs, I'd love to hear
+                        from you.
+                    </p>
+
+                    <!-- Contact Details -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+                                <i class="fas fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500">Email</p>
+                                <a href="mailto:arasuaswin7@gmail.com"
+                                    class="text-white hover:text-accent transition-colors">arasuaswin7@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                <i class="fas fa-phone text-purple-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500">Phone</p>
+                                <a href="tel:+919342377523" class="text-white hover:text-accent transition-colors">+91
+                                    9342377523</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-500/10 flex items-center justify-center">
+                                <i class="fas fa-clock text-green-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500">Availability</p>
+                                <p class="text-white">Open to opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/in/iamaswinr" target="_blank"
+                            class="social-icon w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#0077B5] hover:border-[#0077B5]"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#"
+                            class="social-icon w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700"
+                            aria-label="GitHub">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="mailto:arasuaswin7@gmail.com"
+                            class="social-icon w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-accent hover:border-accent"
+                            aria-label="Email">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: CTA Card -->
+                <div class="animate-on-scroll delay-1">
+                    <div class="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50 text-center">
+                        <div class="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-file-download text-2xl text-accent"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Get My Resume</h3>
+                        <p class="text-slate-400 mb-6">Download my resume to learn more about my experience, projects,
+                            and certifications.</p>
+                        <a href="R_Aswin_Resume.pdf" download="R_Aswin_Resume.pdf"
+                            class="download-btn inline-flex items-center justify-center gap-3 w-full px-6 py-4 bg-accent hover:bg-accent-dark text-white font-bold rounded-xl shadow-lg hover:shadow-glow transition-all duration-300">
+                            <i class="fas fa-download"></i>
+                            <span>Download Resume</span>
+                        </a>
+                        <p class="text-slate-500 text-sm mt-4">PDF format • Last updated Dec 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent my-12"></div>
+
+            <!-- Copyright -->
+            <p class="text-slate-500 text-sm text-center">
+                &copy; 2025 R Aswin. All rights reserved. • Built with passion for the cloud.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.style.maxHeight = '0';
+                setTimeout(() => {
+                    menu.style.maxHeight = menu.scrollHeight + 'px';
+                }, 10);
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                menu.style.maxHeight = '0';
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.style.background = 'rgba(10, 15, 26, 0.98)';
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.style.background = 'rgba(10, 15, 26, 0.9)';
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return; // Skip for download/placeholder links
+
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu transition styles
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.style.overflow = 'hidden';
+        mobileMenu.style.transition = 'max-height 0.3s ease-out';
+    </script>
+</body>
+
+</html>
